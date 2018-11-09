@@ -1,3 +1,5 @@
+import book.objectorienteddesign.generic.methods.GenericDemo;
+
 import java.util.*;
 
 public class Test {
@@ -35,10 +37,15 @@ public class Test {
 
         String[] s = {"+37477939733","+37499266857"};
 
-        HashMap<String ,Long> longHashMap = new HashMap<>();
-        longHashMap.put(s[0], 15L);
+//        HashMap<String ,Long> longHashMap = new HashMap<>();
+//        longHashMap.put(s[0], 15L);
 
-        System.out.println(longHashMap.get(s[1]));
+        String[] m= new String[s.length];
+        GenericDemo.reverse(s);
+        for (int i = 0; i < s.length; i++) {
+            System.out.println(s[i]);
+
+        }
 
     }
 }

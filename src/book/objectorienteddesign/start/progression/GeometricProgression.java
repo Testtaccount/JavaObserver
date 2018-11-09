@@ -1,4 +1,4 @@
-package book.objectorienteddesign;
+package book.objectorienteddesign.start.progression;
 
 public class GeometricProgression extends Progression {
     protected long base;

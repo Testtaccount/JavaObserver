@@ -1,4 +1,4 @@
-package book.objectorienteddesign;
+package book.objectorienteddesign.start.progression;
 
 /**
  * Generates a simple progression. By default: 0, 1, 2, ...
