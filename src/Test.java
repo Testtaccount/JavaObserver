@@ -40,12 +40,27 @@ public class Test {
 //        HashMap<String ,Long> longHashMap = new HashMap<>();
 //        longHashMap.put(s[0], 15L);
 
-        String[] m= new String[s.length];
-        GenericDemo.reverse(s);
-        for (int i = 0; i < s.length; i++) {
-            System.out.println(s[i]);
+//        String[] m= new String[s.length];
+//        GenericDemo.reverse(s);
+//        for (int i = 0; i < 256; i++) {
+//            System.out.println("DEC: "+i+" Char: "+(char)i);
+//            if(i==127) System.out.println("\n");
+//        }
+//
+//        char c = 'z' + '1';
+//        System.out.println(c);
+//        System.out.println((char)150);
 
-        }
 
+        int[ ][ ] data = new int[8][10];
+
+//    data[i][i+1] = data[i][i] + 3;
+        int j = data.length; // j is 8
+        int k = data[4].length;
+        System.out.println(j);
+        System.out.println(k);
     }
+
+
+
 }
