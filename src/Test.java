@@ -1,4 +1,6 @@
 import book.objectorienteddesign.generic.methods.GenericDemo;
+import book.objectorienteddesign.linkedLists.singlylinkedlists.SinglyLinkedList;
+import jdk.nashorn.internal.runtime.NumberToString;
 
 import java.util.*;
 
@@ -35,7 +37,7 @@ public class Test {
 //        set.add(102L);
 //        set.add(12L);
 
-        String[] s = {"+37477939733","+37499266857"};
+        String[] s = {"+37477939733", "+37499266857"};
 
 //        HashMap<String ,Long> longHashMap = new HashMap<>();
 //        longHashMap.put(s[0], 15L);
@@ -52,15 +54,68 @@ public class Test {
 //        System.out.println((char)150);
 
 
-        int[ ][ ] data = new int[8][10];
+//        int[ ][ ] data = new int[8][10];
+//
+////    data[i][i+1] = data[i][i] + 3;
+//        int j = data.length; // j is 8
+//        int k = data[4].length;
+//        System.out.println(j);
+//        System.out.println(k);
 
-//    data[i][i+1] = data[i][i] + 3;
-        int j = data.length; // j is 8
-        int k = data[4].length;
-        System.out.println(j);
-        System.out.println(k);
+
+        Abc abc = new Abc(65);
+        Abc abc1 = new Abc(1);
+        Abc abc2 = new Abc(233);
+        Abc abc3 = new Abc(3);
+
+        SinglyLinkedList<Abc> singlyLinkedList = new SinglyLinkedList<>();
+        singlyLinkedList.addLast(abc);
+        singlyLinkedList.addLast(abc1);
+        singlyLinkedList.addLast(abc2);
+        singlyLinkedList.addLast(abc3);
+
+        singlyLinkedList.add(4,new Abc(5));
+//       int a= 1;
+//       int b= 2147483647;
+
+//        int c=a+b;
+//        for (int i = 0; i < 100_000; i++) {
+//            singlyLinkedList.addLast(new Abc(i));
+//        }
+
+        System.out.println(singlyLinkedList.remove(4));
+        System.out.println(singlyLinkedList.remove(4));
+        for (int i = 0; i < singlyLinkedList.size() ; i++) {
+            System.out.println( singlyLinkedList.get(i) );
+        }
+
+//        if(!isOverflow(a,b)){
+//            System.out.println(c);
+//        }else {
+//            System.out.println("Overflow");
+//        }
+
+
     }
 
+    static boolean isOverflow(int left, int right) {
+        return right > 0
+                ? Integer.MAX_VALUE - right < left
+                : Integer.MIN_VALUE - right > left;
+    }
 
+    static class Abc {
+
+        int a;
+
+        public Abc(int a) {
+            this.a = a;
+        }
+
+        @Override
+        public String toString() {
+            return "" + a;
+        }
+    }
 
 }
