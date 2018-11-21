@@ -1,5 +1,7 @@
 import book.objectorienteddesign.generic.methods.GenericDemo;
 import book.objectorienteddesign.linkedLists.singlylinkedlists.SinglyLinkedList;
+import book.objectorienteddesign.recursion.binary.Binary;
+import book.objectorienteddesign.recursion.factorial.Factorial;
 import jdk.nashorn.internal.runtime.NumberToString;
 
 import java.util.*;
@@ -83,11 +85,19 @@ public class Test {
 //            singlyLinkedList.addLast(new Abc(i));
 //        }
 
-        System.out.println(singlyLinkedList.remove(4));
-        System.out.println(singlyLinkedList.remove(4));
-        for (int i = 0; i < singlyLinkedList.size() ; i++) {
-            System.out.println( singlyLinkedList.get(i) );
-        }
+//        System.out.println(singlyLinkedList.remove(4));
+//        System.out.println(singlyLinkedList.remove(4));
+//        for (int i = 0; i < singlyLinkedList.size() ; i++) {
+//            System.out.println( singlyLinkedList.get(i) );
+//        }
+
+        int[] arr = {1,5,6,9,55,333,424,668,1000};
+
+        System.out.println(Binary.binarySearch(arr,1,0,arr.length-1));
+        System.out.println(Binary.indexOf(arr,10040));
+        System.out.println(Arrays.binarySearch(arr, 5));
+
+
 
 //        if(!isOverflow(a,b)){
 //            System.out.println(c);
